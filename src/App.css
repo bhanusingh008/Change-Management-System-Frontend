@@ -1,0 +1,41 @@
+.background-mesh {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow:hidden;
+  }
+  .circle1 {
+    display: block;
+    position: absolute;
+    top: -6%;
+    left: -20%;
+    height: 115%;
+    width: 100%;
+    border-radius: 50%;
+    background: #7e1af099;
+    filter: blur(50px);
+  }
+  .circle2 {
+    display: block;
+    position: absolute;
+    top: -50%;
+    left: 30%;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background: #4a7dc599;
+    filter: blur(50px);
+  }
+  .circle3 {
+    display: block;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    height: 100%;
+    width: 80%;
+    border-radius: 50%;
+    background: #c4088b99;
+    filter: blur(50px);
+  }
