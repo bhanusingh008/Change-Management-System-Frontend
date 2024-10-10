@@ -1,50 +1,44 @@
-# React + TypeScript + Vite
+# Project Proposal: Change Management System (CMS)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## **1. Project Overview**
+Created a Change Management System (CMS) designed to streamline the process of managing change requests within an organization.
+It serves the purpose of allowing a user create change ticket and get it approved by a supervisor.
 
-Currently, two official plugins are available:
+## **2. Objectives**
+- To provide a user-friendly interface for submitting change requests.
+- To facilitate the approval process through role-based access.
+- To track the status and history of change tickets.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## **3. Key Features**
+- **User Authentication**: Secure login and registration process for users.
+- **Change Ticket Submission**: Users can create and submit change tickets with relevant details such as title, description, priority, and type, systems Affected.
+- **Approval Workflow**: Role-based access controls to manage who can approve change tickets.
+- **Ticket Tracking**: Users can view their submitted tickets and their current status (e.g., pending, approved, rejected).
 
-## Expanding the ESLint configuration
+## **4. Technology Stack**
+- **Frontend**: 
+  - **React**: A JavaScript library for building user interfaces.
+  - **TypeScript**: A typed superset of JavaScript that improves development efficiency and code quality.
+  - **Vite**: A fast development build tool for modern web applications.
+  
+- **Backend**:
+  - **Node.js**: A JavaScript runtime for building scalable server-side applications.
+  - **Express**: A web application framework for Node.js, providing robust routing and middleware support.
+  - **Prisma**: An ORM (Object Relational Mapping) tool for seamless database interaction.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Database**:
+  - **MySQL**: A relational database management system for storing and managing application data.
 
-- Configure the top-level `parserOptions` property like this:
+## **5. How It Works**
+1. **User Registration and Login**:
+   - Users can register and log in to the system. Authentication is handled using JWT (JSON Web Tokens) for secure session management.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+2. **Creating Change Tickets**:
+   - Once logged in, users can create change tickets by filling out a form with the required information (title, description, priority, type, affected systems). This data is sent to the backend using a POST request.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+3. **Managing Change Tickets**:
+   - The system will store the tickets in the MySQL database. The user can view their submitted tickets and their statuses.
+   - An approval mechanism is implemented where users with specific roles can approve or reject change tickets. This is handled via PUT requests to update ticket statuses.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## **6. Conclusion**
+The Change Management System aims to simplify and enhance the change management process within organizations. By providing a centralized platform for managing change tickets, the CMS improves transparency, accountability, and collaboration among stakeholders.
