@@ -46,6 +46,7 @@ const Dashboard: React.FC<{}> = () => {
         createdById: user.id,
         creatorRole: user.role
       });
+      console.log(res)
       window.location.reload();
     } catch (err) { 
       console.log(err);

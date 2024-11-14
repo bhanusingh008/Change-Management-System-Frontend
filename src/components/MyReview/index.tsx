@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { cmsAxiosGet, cmsAxiosPost, cmsAxiosPut } from "../../../utils/axiosHelper";
+import { cmsAxiosGet, cmsAxiosPut } from "../../../utils/axiosHelper";
 import { StyledReviewTickets } from "./styled";
 
 interface ReviewTicket {
@@ -21,6 +21,7 @@ const ReviewTickets: React.FC = () => {
       const r = await cmsAxiosPut(`/ticket/approve`, {
         ticketId: ticketId
       });
+      console.log(r)
       alert("Ticket Approved!")
       window.location.reload();
     } catch (err) {
